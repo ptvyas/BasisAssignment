@@ -13,8 +13,10 @@ struct STORYBOARD {
 
 
 struct APP_MESSAGE {
-    static let workingProgress          = "Working on progress"
-    static let comingSoon               = "Coming soon"
+    static let somethingWrong             = "Something went wrong"
+    static let pleaseTryAgain             = "Please try again!"
+    //static let workingProgress          = "Working on progress"
+    //static let comingSoon               = "Coming soon"
     
     
     static let enterEmail               = "Please enter email address"

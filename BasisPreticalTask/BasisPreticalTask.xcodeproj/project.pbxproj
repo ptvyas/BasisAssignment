@@ -28,6 +28,7 @@
 		9A3BBA78287EC6C700562B6E /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BBA77287EC6C700562B6E /* APIConstant.swift */; };
 		9A3BBA7A287EC73400562B6E /* UtilityHTTPS+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BBA79287EC73400562B6E /* UtilityHTTPS+User.swift */; };
 		9A3BBA7C287ECAEA00562B6E /* Extentions+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BBA7B287ECAEA00562B6E /* Extentions+String.swift */; };
+		9A3BBA7F287ED63B00562B6E /* LoginRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BBA7E287ED63B00562B6E /* LoginRes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		9A3BBA77287EC6C700562B6E /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		9A3BBA79287EC73400562B6E /* UtilityHTTPS+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UtilityHTTPS+User.swift"; sourceTree = "<group>"; };
 		9A3BBA7B287ECAEA00562B6E /* Extentions+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+String.swift"; sourceTree = "<group>"; };
+		9A3BBA7E287ED63B00562B6E /* LoginRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,8 +194,17 @@
 			children = (
 				9A3BBA75287EC61300562B6E /* UtilityHTTPS.swift */,
 				9A3BBA79287EC73400562B6E /* UtilityHTTPS+User.swift */,
+				9A3BBA7D287ED5D300562B6E /* APIModels */,
 			);
 			path = "Utility+HTTPS";
+			sourceTree = "<group>";
+		};
+		9A3BBA7D287ED5D300562B6E /* APIModels */ = {
+			isa = PBXGroup;
+			children = (
+				9A3BBA7E287ED63B00562B6E /* LoginRes.swift */,
+			);
+			path = APIModels;
 			sourceTree = "<group>";
 		};
 		FFC12BE4437EACC3CE150276 /* Pods */ = {
@@ -324,6 +335,7 @@
 			files = (
 				9A3BBA76287EC61300562B6E /* UtilityHTTPS.swift in Sources */,
 				9A3A7D44287E8FC3005E8805 /* ViewController.swift in Sources */,
+				9A3BBA7F287ED63B00562B6E /* LoginRes.swift in Sources */,
 				9A3A7D40287E8FC3005E8805 /* AppDelegate.swift in Sources */,
 				9A3BBA7A287EC73400562B6E /* UtilityHTTPS+User.swift in Sources */,
 				9A3A7D63287E9847005E8805 /* SignOutVC.swift in Sources */,

@@ -19,9 +19,9 @@ class EmailVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        self.txtEmail.text = "mayank@getbasis.co" //App User
     }
-    
-    
+        
     // MARK: - Button actions
     
     @IBAction func btnEmailAction(_ sender: UIButton) {
@@ -38,12 +38,31 @@ class EmailVC: UIViewController {
             return
         }
         
-        UtilityHTTPS().checkUser_Email(withEmail: vEmail) { objError, arrUser in
-            print("objError: \(objError)")
-            print("arrUser: \(arrUser)")
+        UtilityHTTPS().checkUser_Email(withEmail: vEmail) { objError, isSuccess, apiMessage, objUser in
+//            print("isSuccess: \(isSuccess)")
+//            print("message: \(message)")
+//            print("objUser.isLogin: \(objUser?.isLogin)")
+            if let objError = objError {
+                showAlertMessage(nil, objError.localizedDescription, onViewController: self)
+                return
+            }
+            
+            let vMessge : String = apiMessage ?? [APP_MESSAGE.somethingWrong, APP_MESSAGE.pleaseTryAgain].joined(separator: "\n")
+            if !isSuccess {
+                showAlertMessage(nil, vMessge, onViewController: self)
+                return
+            }
+            guard let objUser = objUser else {
+                showAlertMessage(nil, vMessge, onViewController: self)
+                return
+            }
+            //Move to Verify Email
+            runOnMainThread {
+            guard let objVC = loadVC(strStoryboardId: STORYBOARD.Main, strVCId: "EmailVarificationVC") as? EmailVarificationVC else { return }
+            objVC.objLoginRes = objUser
+            self.navigationController?.pushViewController(objVC, animated: true)
+            }
         }
-        //guard let objVC = loadVC(strStoryboardId: STORYBOARD.Main, strVCId: "EmailVarificationVC") as? EmailVarificationVC else { return }
-        //self.navigationController?.pushViewController(objVC, animated: true)
     }
 }
 

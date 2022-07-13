@@ -13,3 +13,10 @@ public func runAfterTime(time: Double, block: @escaping () -> ()) {
         block()
     })
 }
+
+/// Runs a block in the main thread
+public func runOnMainThread(block: @escaping () -> ()) {
+    DispatchQueue.main.async {
+        block()
+    }
+}

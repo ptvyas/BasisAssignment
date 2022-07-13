@@ -14,6 +14,8 @@ class EmailVarificationVC: UIViewController {
     
     @IBOutlet weak var OTPView: SVPinView!
     
+    //MARK: - Variables
+    var objLoginRes : LoginRes?
     
     //MARK: -
     override func viewDidLoad() {
@@ -35,7 +37,7 @@ class EmailVarificationVC: UIViewController {
     @IBAction func btnSubmitAction(_ sender: UIButton) {
         hideKeyboard(self)
         
-        guard let objVC = loadVC(strStoryboardId: STORYBOARD.Main, strVCId: "EmailVarificationVC") as? EmailVarificationVC else { return }
+        guard let objVC = loadVC(strStoryboardId: STORYBOARD.Main, strVCId: "SignOutVC") as? SignOutVC else { return }
         self.navigationController?.pushViewController(objVC, animated: true)
     }
 }
