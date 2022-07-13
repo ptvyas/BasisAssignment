@@ -1,0 +1,20 @@
+PODS:
+  - IQKeyboardManager (6.5.10)
+  - SVPinView (1.0.11)
+
+DEPENDENCIES:
+  - IQKeyboardManager (~> 6.5.9)
+  - SVPinView
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManager
+    - SVPinView
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: 45a1fa55c1a5b02c61ac0fd7fd5b62bb4ad20d97
+  SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
+
+PODFILE CHECKSUM: 2cf12da9af383a004c6629ad30cb7fe0a6405682
+
+COCOAPODS: 1.11.3
