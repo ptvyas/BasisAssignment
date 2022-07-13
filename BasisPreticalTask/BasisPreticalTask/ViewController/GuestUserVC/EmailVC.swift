@@ -8,22 +8,32 @@
 import UIKit
 
 class EmailVC: UIViewController {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var txtEmail: UITextField!
+    
+    // MARK: - Variabes
+    
+    // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - Button actions
+    
+    @IBAction func btnEmailAction(_ sender: UIButton) {
+        hideKeyboard(self)
+        guard let objVC = loadVC(strStoryboardId: STORYBOARD.Main, strVCId: "EmailVarificationVC") as? EmailVarificationVC else { return }
+        self.navigationController?.pushViewController(objVC, animated: true)
     }
-    */
+}
 
+extension EmailVC : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

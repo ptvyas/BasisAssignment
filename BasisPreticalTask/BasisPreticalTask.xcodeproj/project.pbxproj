@@ -20,9 +20,10 @@
 		9A3A7D60287E97D5005E8805 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D5F287E97D5005E8805 /* AppConstants.swift */; };
 		9A3A7D63287E9847005E8805 /* SignOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D62287E9847005E8805 /* SignOutVC.swift */; };
 		9A3A7D65287E9857005E8805 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D64287E9857005E8805 /* EmailVC.swift */; };
-		9A3A7D67287E9876005E8805 /* OTPVrificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D66287E9876005E8805 /* OTPVrificationVC.swift */; };
+		9A3A7D67287E9876005E8805 /* EmailVarificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D66287E9876005E8805 /* EmailVarificationVC.swift */; };
 		9A3A7D69287E98B5005E8805 /* Utility+Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D68287E98B5005E8805 /* Utility+Thread.swift */; };
 		9A3A7D6C287E9979005E8805 /* Extention+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D6B287E9979005E8805 /* Extention+UIView.swift */; };
+		9A3BBA72287EC49700562B6E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BBA71287EC49700562B6E /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +44,10 @@
 		9A3A7D5F287E97D5005E8805 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		9A3A7D62287E9847005E8805 /* SignOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutVC.swift; sourceTree = "<group>"; };
 		9A3A7D64287E9857005E8805 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
-		9A3A7D66287E9876005E8805 /* OTPVrificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVrificationVC.swift; sourceTree = "<group>"; };
+		9A3A7D66287E9876005E8805 /* EmailVarificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVarificationVC.swift; sourceTree = "<group>"; };
 		9A3A7D68287E98B5005E8805 /* Utility+Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utility+Thread.swift"; sourceTree = "<group>"; };
 		9A3A7D6B287E9979005E8805 /* Extention+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention+UIView.swift"; sourceTree = "<group>"; };
+		9A3BBA71287EC49700562B6E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,8 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				9A3A7D64287E9857005E8805 /* EmailVC.swift */,
-				9A3A7D66287E9876005E8805 /* OTPVrificationVC.swift */,
+				9A3A7D66287E9876005E8805 /* EmailVarificationVC.swift */,
 				9A3A7D62287E9847005E8805 /* SignOutVC.swift */,
+				9A3BBA71287EC49700562B6E /* HomeVC.swift */,
 			);
 			path = GuestUserVC;
 			sourceTree = "<group>";
@@ -171,7 +174,6 @@
 				83421F7FFD19005238FB5A74 /* Pods-BasisPreticalTask.debug.xcconfig */,
 				93E74A5806599A312F779491 /* Pods-BasisPreticalTask.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -295,12 +297,13 @@
 				9A3A7D44287E8FC3005E8805 /* ViewController.swift in Sources */,
 				9A3A7D40287E8FC3005E8805 /* AppDelegate.swift in Sources */,
 				9A3A7D63287E9847005E8805 /* SignOutVC.swift in Sources */,
-				9A3A7D67287E9876005E8805 /* OTPVrificationVC.swift in Sources */,
+				9A3A7D67287E9876005E8805 /* EmailVarificationVC.swift in Sources */,
 				9A3A7D69287E98B5005E8805 /* Utility+Thread.swift in Sources */,
 				9A3A7D6C287E9979005E8805 /* Extention+UIView.swift in Sources */,
 				9A3A7D65287E9857005E8805 /* EmailVC.swift in Sources */,
 				9A3A7D5D287E9714005E8805 /* UtilityFunctions.swift in Sources */,
 				9A3A7D42287E8FC3005E8805 /* SceneDelegate.swift in Sources */,
+				9A3BBA72287EC49700562B6E /* HomeVC.swift in Sources */,
 				9A3A7D60287E97D5005E8805 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +462,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,6 +492,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
