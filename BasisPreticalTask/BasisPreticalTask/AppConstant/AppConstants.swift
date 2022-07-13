@@ -13,9 +13,12 @@ struct STORYBOARD {
 
 
 struct APP_MESSAGE {
-    static let workingProgress = "Working on progress"
-    static let comingSoon = "Coming soon"
+    static let workingProgress          = "Working on progress"
+    static let comingSoon               = "Coming soon"
     
     
-    static let Resend_OPT_Success = "OPT successfully."
+    static let enterEmail               = "Please enter email address"
+    static let enterValidEmail          = "Please enter valid email address"
+    
+    static let Resend_OPT_Success       = "OPT successfully."
 }
