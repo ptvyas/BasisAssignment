@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        //Loader Setup
+        SVProgressHUD.setForegroundColor(UIColor.lightGray.withAlphaComponent(0.5))
+        SVProgressHUD.setDefaultStyle(.dark)
+        SVProgressHUD.setBorderColor(UIColor.red)
         
         runAfterTime(time: 1.0) {
             guard let objVC = loadVC(strStoryboardId: STORYBOARD.Main, strVCId: "EmailVC") as? EmailVC else { return }

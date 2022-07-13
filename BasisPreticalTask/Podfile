@@ -9,5 +9,5 @@ target 'BasisPreticalTask' do
 
 pod 'IQKeyboardManager', '~> 6.5.9'
 pod 'SVPinView'  
-
+pod 'SVProgressHUD'
 end

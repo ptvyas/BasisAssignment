@@ -9,53 +9,15 @@ import Foundation
 import SystemConfiguration
 
 class UtilityHTTPS {
-    
-    func requestGet(withEndPointURL url : URL,
-                    completionHandler : @escaping (_ objError : Error?,
-                                                   _ responseData : AnyObject?) -> Void) {
-        var request = URLRequest(url:url, timeoutInterval: Double.infinity)
-        request.httpMethod = HTTPSMethod.GET.rawValue
-        
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                print("Error accessing swapi.co: \(error.localizedDescription)")
-                
-                completionHandler(error, nil)
-                return
-            }
-            var responseData : AnyObject?
-            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                print("Error with the response, unexpected status code: \(String(describing: response))")
-                
-                completionHandler(MyError.EmptyData, responseData)
-                return
-            }
-            guard let data = data else {
-                completionHandler(nil, nil)
-                return
-            }
-            do {
-                //Convert to Data
-                responseData = try JSONSerialization.jsonObject(with: data, options: []) as? AnyObject
-                //print("jsonData: \(jsonData)")
-                
-                completionHandler(nil, responseData)
-            } catch {
-                print("Error: \(error.localizedDescription)")
-                completionHandler(error, nil)
-            }
-        }
-        task.resume()
-    }
-    
+   
     func requestPost(withEndPointURL url : URL,
+                     httpMethod : HTTPSMethod = HTTPSMethod.POST,
                      parameters : [String : Any],
                      completionHandler : @escaping (_ objError : Error?,
                                                     _ responseData : AnyObject?) -> Void) {
         //Create Request
         var request = URLRequest(url:url, timeoutInterval: Double.infinity)
-        request.httpMethod = HTTPSMethod.POST.rawValue
-        
+        request.httpMethod = httpMethod.rawValue
         
         //Req. Body
         var postData = NSData()
@@ -69,7 +31,6 @@ class UtilityHTTPS {
         
         //Req. Header
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("\(postData.length)", forHTTPHeaderField: "Content-Length")
         
         let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
             
@@ -83,6 +44,7 @@ class UtilityHTTPS {
                 completionHandler(nil, nil)
                 return
             }
+            //print("\(#function) | data: \(String(data: data, encoding: .utf8))")
             
             var responseData : AnyObject?
             do {

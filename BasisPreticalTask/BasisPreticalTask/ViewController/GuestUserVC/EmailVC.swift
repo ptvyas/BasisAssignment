@@ -18,12 +18,11 @@ class EmailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        self.txtEmail.text = "mayank@getbasis.co" //App User
+        // Testing purpose
+        //self.txtEmail.text = "mayank@getbasis.co" //App User
     }
         
     // MARK: - Button actions
-    
     @IBAction func btnEmailAction(_ sender: UIButton) {
         hideKeyboard(self)
         
@@ -38,10 +37,9 @@ class EmailVC: UIViewController {
             return
         }
         
+        showLoader()
         UtilityHTTPS().checkUser_Email(withEmail: vEmail) { objError, isSuccess, apiMessage, objUser in
-//            print("isSuccess: \(isSuccess)")
-//            print("message: \(message)")
-//            print("objUser.isLogin: \(objUser?.isLogin)")
+            hideLoader()
             if let objError = objError {
                 showAlertMessage(nil, objError.localizedDescription, onViewController: self)
                 return
@@ -57,8 +55,9 @@ class EmailVC: UIViewController {
                 return
             }
             //Move to Verify Email
-            runOnMainThread {
+            runOnMainThread {                
             guard let objVC = loadVC(strStoryboardId: STORYBOARD.Main, strVCId: "EmailVarificationVC") as? EmailVarificationVC else { return }
+            objVC.userEmail = vEmail
             objVC.objLoginRes = objUser
             self.navigationController?.pushViewController(objVC, animated: true)
             }

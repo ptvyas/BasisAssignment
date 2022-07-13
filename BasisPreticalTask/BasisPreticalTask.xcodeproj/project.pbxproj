@@ -18,17 +18,19 @@
 		9A3A7D5A287E9115005E8805 /* AppIconsAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A3A7D59287E9115005E8805 /* AppIconsAssets.xcassets */; };
 		9A3A7D5D287E9714005E8805 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D5C287E9714005E8805 /* UtilityFunctions.swift */; };
 		9A3A7D60287E97D5005E8805 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D5F287E97D5005E8805 /* AppConstants.swift */; };
-		9A3A7D63287E9847005E8805 /* SignOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D62287E9847005E8805 /* SignOutVC.swift */; };
+		9A3A7D63287E9847005E8805 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D62287E9847005E8805 /* SignUpVC.swift */; };
 		9A3A7D65287E9857005E8805 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D64287E9857005E8805 /* EmailVC.swift */; };
 		9A3A7D67287E9876005E8805 /* EmailVarificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D66287E9876005E8805 /* EmailVarificationVC.swift */; };
 		9A3A7D69287E98B5005E8805 /* Utility+Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D68287E98B5005E8805 /* Utility+Thread.swift */; };
 		9A3A7D6C287E9979005E8805 /* Extention+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A7D6B287E9979005E8805 /* Extention+UIView.swift */; };
-		9A3BBA72287EC49700562B6E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BBA71287EC49700562B6E /* HomeVC.swift */; };
 		9A3BBA76287EC61300562B6E /* UtilityHTTPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BBA75287EC61300562B6E /* UtilityHTTPS.swift */; };
 		9A3BBA78287EC6C700562B6E /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BBA77287EC6C700562B6E /* APIConstant.swift */; };
 		9A3BBA7A287EC73400562B6E /* UtilityHTTPS+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BBA79287EC73400562B6E /* UtilityHTTPS+User.swift */; };
 		9A3BBA7C287ECAEA00562B6E /* Extentions+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BBA7B287ECAEA00562B6E /* Extentions+String.swift */; };
 		9A3BBA7F287ED63B00562B6E /* LoginRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BBA7E287ED63B00562B6E /* LoginRes.swift */; };
+		9A3BBA81287EE63700562B6E /* LoginUserRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BBA80287EE63700562B6E /* LoginUserRes.swift */; };
+		9A3BBA83287EEC6800562B6E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3BBA82287EEC6800562B6E /* Home.storyboard */; };
+		9A3BBA86287EECA800562B6E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BBA85287EECA800562B6E /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,17 +49,19 @@
 		9A3A7D59287E9115005E8805 /* AppIconsAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIconsAssets.xcassets; sourceTree = "<group>"; };
 		9A3A7D5C287E9714005E8805 /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
 		9A3A7D5F287E97D5005E8805 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		9A3A7D62287E9847005E8805 /* SignOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutVC.swift; sourceTree = "<group>"; };
+		9A3A7D62287E9847005E8805 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		9A3A7D64287E9857005E8805 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
 		9A3A7D66287E9876005E8805 /* EmailVarificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVarificationVC.swift; sourceTree = "<group>"; };
 		9A3A7D68287E98B5005E8805 /* Utility+Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utility+Thread.swift"; sourceTree = "<group>"; };
 		9A3A7D6B287E9979005E8805 /* Extention+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention+UIView.swift"; sourceTree = "<group>"; };
-		9A3BBA71287EC49700562B6E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		9A3BBA75287EC61300562B6E /* UtilityHTTPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityHTTPS.swift; sourceTree = "<group>"; };
 		9A3BBA77287EC6C700562B6E /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		9A3BBA79287EC73400562B6E /* UtilityHTTPS+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UtilityHTTPS+User.swift"; sourceTree = "<group>"; };
 		9A3BBA7B287ECAEA00562B6E /* Extentions+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+String.swift"; sourceTree = "<group>"; };
 		9A3BBA7E287ED63B00562B6E /* LoginRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRes.swift; sourceTree = "<group>"; };
+		9A3BBA80287EE63700562B6E /* LoginUserRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserRes.swift; sourceTree = "<group>"; };
+		9A3BBA82287EEC6800562B6E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		9A3BBA85287EECA800562B6E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 			children = (
 				9A3A7D4A287E8FC6005E8805 /* LaunchScreen.storyboard */,
 				9A3A7D45287E8FC3005E8805 /* Main.storyboard */,
+				9A3BBA82287EEC6800562B6E /* Home.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			children = (
 				9A3A7D43287E8FC3005E8805 /* ViewController.swift */,
 				9A3A7D61287E97F5005E8805 /* GuestUserVC */,
+				9A3BBA84287EEC9500562B6E /* Home */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -167,8 +173,7 @@
 			children = (
 				9A3A7D64287E9857005E8805 /* EmailVC.swift */,
 				9A3A7D66287E9876005E8805 /* EmailVarificationVC.swift */,
-				9A3A7D62287E9847005E8805 /* SignOutVC.swift */,
-				9A3BBA71287EC49700562B6E /* HomeVC.swift */,
+				9A3A7D62287E9847005E8805 /* SignUpVC.swift */,
 			);
 			path = GuestUserVC;
 			sourceTree = "<group>";
@@ -203,8 +208,17 @@
 			isa = PBXGroup;
 			children = (
 				9A3BBA7E287ED63B00562B6E /* LoginRes.swift */,
+				9A3BBA80287EE63700562B6E /* LoginUserRes.swift */,
 			);
 			path = APIModels;
+			sourceTree = "<group>";
+		};
+		9A3BBA84287EEC9500562B6E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9A3BBA85287EECA800562B6E /* HomeVC.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		FFC12BE4437EACC3CE150276 /* Pods */ = {
@@ -279,6 +293,7 @@
 				9A3A7D4C287E8FC6005E8805 /* LaunchScreen.storyboard in Resources */,
 				9A3A7D49287E8FC6005E8805 /* Assets.xcassets in Resources */,
 				9A3A7D5A287E9115005E8805 /* AppIconsAssets.xcassets in Resources */,
+				9A3BBA83287EEC6800562B6E /* Home.storyboard in Resources */,
 				9A3A7D58287E9102005E8805 /* AppColorAssets.xcassets in Resources */,
 				9A3A7D47287E8FC3005E8805 /* Main.storyboard in Resources */,
 			);
@@ -336,18 +351,19 @@
 				9A3BBA76287EC61300562B6E /* UtilityHTTPS.swift in Sources */,
 				9A3A7D44287E8FC3005E8805 /* ViewController.swift in Sources */,
 				9A3BBA7F287ED63B00562B6E /* LoginRes.swift in Sources */,
+				9A3BBA86287EECA800562B6E /* HomeVC.swift in Sources */,
 				9A3A7D40287E8FC3005E8805 /* AppDelegate.swift in Sources */,
 				9A3BBA7A287EC73400562B6E /* UtilityHTTPS+User.swift in Sources */,
-				9A3A7D63287E9847005E8805 /* SignOutVC.swift in Sources */,
+				9A3A7D63287E9847005E8805 /* SignUpVC.swift in Sources */,
 				9A3A7D67287E9876005E8805 /* EmailVarificationVC.swift in Sources */,
 				9A3BBA78287EC6C700562B6E /* APIConstant.swift in Sources */,
 				9A3A7D69287E98B5005E8805 /* Utility+Thread.swift in Sources */,
 				9A3A7D6C287E9979005E8805 /* Extention+UIView.swift in Sources */,
 				9A3BBA7C287ECAEA00562B6E /* Extentions+String.swift in Sources */,
 				9A3A7D65287E9857005E8805 /* EmailVC.swift in Sources */,
+				9A3BBA81287EE63700562B6E /* LoginUserRes.swift in Sources */,
 				9A3A7D5D287E9714005E8805 /* UtilityFunctions.swift in Sources */,
 				9A3A7D42287E8FC3005E8805 /* SceneDelegate.swift in Sources */,
-				9A3BBA72287EC49700562B6E /* HomeVC.swift in Sources */,
 				9A3A7D60287E97D5005E8805 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-BasisPreticalTask/Pods-BasisPreticalTask-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework
 ${BUILT_PRODUCTS_DIR}/SVPinView/SVPinView.framework
+${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework

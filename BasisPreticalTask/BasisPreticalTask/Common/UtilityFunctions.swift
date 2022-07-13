@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SVProgressHUD
 
 //MARK: -  Get VC
 public func getStoryboard(storyboardName: String) -> UIStoryboard {
@@ -39,6 +40,15 @@ func showAlertMessage(_ vTitle : String?,
 }
 
 //MARK: -
+
+func showLoader() {
+    SVProgressHUD.show()
+}
+
+func hideLoader() {
+    SVProgressHUD.dismiss()
+}
+
 /// Hide Keyboard
 public func hideKeyboard(_ onViewController : UIViewController?) {
     onViewController?.view.endEditing(true)
