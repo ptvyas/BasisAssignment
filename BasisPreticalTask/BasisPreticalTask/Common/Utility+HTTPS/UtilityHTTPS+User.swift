@@ -104,6 +104,51 @@ extension UtilityHTTPS {
             completionHandler(nil, isSuccess, vMessage, objLoginUserRes, objLoginUserInfoRes)
         }
     }
+    
+    func referNow(withCode referCode: String, completionHandler : @escaping (_ objError : Error?,
+                                                                                          _ isSuccess : Bool,
+                                                                                          _ message : String?,                        _ objUserInfo : LoginUserRes?) -> Void) {
+        if !isConnectedToNetwork() {
+            completionHandler(MyError.NoInternet, false, nil, nil)
+            return
+        }
+        
+        let endPoint : String = String(format: API.user_referral, referCode)
+        guard let url = URL(string: endPoint) else {
+            completionHandler(MyError.InvalidData, false, nil, nil)
+            return
+        }
+        
+        UtilityHTTPS().requestGet(withEndPointURL: url) { objError, responseData in
+            
+            var isSuccess : Bool = false
+            var vMessage : String?
+            var objLoginUserInfoRes : LoginUserRes?
+            
+            if let objError = objError {
+                print("objError: \(objError.localizedDescription)")
+                
+                completionHandler(objError, isSuccess, vMessage, objLoginUserInfoRes)
+                return
+            }
+            guard let dicData = responseData else {
+                completionHandler(MyError.EmptyData, isSuccess, vMessage, objLoginUserInfoRes)
+                return
+            }
+            
+            //isSuccess
+            isSuccess = self.getIsSuccessStatus(withResponse: dicData)
+            
+            //Message
+            vMessage = self.getMessage(withResponse: dicData)
+            
+            //User Result
+            if let dicResult = dicData["results"] as? [String : Any] {
+                objLoginUserInfoRes = LoginUserRes.init(dicResult)
+            }
+            completionHandler(nil, isSuccess, vMessage, objLoginUserInfoRes)
+        }
+    }
 }
 
 extension UtilityHTTPS {

@@ -60,6 +60,56 @@ class UtilityHTTPS {
         }
         task.resume()
     }
+    
+    func requestGet(withEndPointURL url : URL,                     
+                     completionHandler : @escaping (_ objError : Error?,
+                                                    _ responseData : AnyObject?) -> Void) {
+        //Create Request
+        var request = URLRequest(url:url, timeoutInterval: Double.infinity)
+        request.httpMethod = HTTPSMethod.GET.rawValue
+        
+        /*
+        //Req. Body
+        var postData = NSData()
+        do {
+            postData = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)  as NSData
+        }
+        catch let error {
+            print("\(#function) | error: \(error.localizedDescription)")
+        }
+        request.httpBody = postData as Data
+        */
+        //Req. Header
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+            
+            if let error = error {
+                print("\(#function) | Error accessing swapi.co: \(error.localizedDescription)")
+                
+                completionHandler(error, nil)
+                return
+            }
+            guard let data = data else {
+                completionHandler(nil, nil)
+                return
+            }
+            print("\(#function) | data: \(String(data: data, encoding: .utf8))")
+            
+            var responseData : AnyObject?
+            do {
+                //Convert to Data
+                responseData = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as? [String : Any] as AnyObject?
+                print("\(#function) | jsonData: \(responseData)")
+                
+                completionHandler(nil, responseData)
+            } catch {
+                print("\(#function) | Error: \(error.localizedDescription)")
+                completionHandler(error, nil)
+             }
+        }
+        task.resume()
+    }
 }
 
 func isConnectedToNetwork() -> Bool {

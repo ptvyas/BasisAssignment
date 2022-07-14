@@ -13,6 +13,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var lblUser: UILabel!
     @IBOutlet weak var lblMessage: UILabel!
     
+    @IBOutlet weak var txtReferName: UITextField!
+    
     //MARK: - Variables
     var objLoginUserRes : LoginUserRes?
     
@@ -21,6 +23,43 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
 
         self.fillValue()
+    }
+    
+    //MARK: - Button action
+    @IBAction func btnReferAction(_ sender: UIButton) {
+        let referVal : String = (self.txtReferName.text ?? "").trim()
+        
+        if referVal.isEmpty {
+            showAlertMessage(nil, APP_MESSAGE.enterReferName, onViewController: self)
+            return
+        }
+        
+        showLoader()
+        UtilityHTTPS().referNow(withCode: referVal) { objError, isSuccess, message, objUserInfo in
+//            print("objError: \(objError)")
+//            print("message: \(message)")
+//            print("objUserInfo: \(objUserInfo?.firstName)")
+            
+            hideLoader()
+            runOnMainThread {
+            if let objError = objError {
+                showAlertMessage(nil, objError.localizedDescription, onViewController: self)
+                return
+            }
+            
+            var vMessge : String = message ?? [APP_MESSAGE.somethingWrong, APP_MESSAGE.pleaseTryAgain].joined(separator: "\n")
+            if !isSuccess {
+                showAlertMessage(nil, vMessge, onViewController: self)
+                return
+            }
+            if let objUser = objUserInfo  {
+                vMessge += "\n Hello \(objUser.getFullName())"
+                showAlertMessage(nil, vMessge, onViewController: self)
+                return
+            }
+            showAlertMessage(nil, vMessge, onViewController: self)
+            }
+        }
     }
 }
 extension HomeVC {

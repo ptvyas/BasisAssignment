@@ -64,4 +64,12 @@ class LoginUserRes {
         communityAcceptance = dict["communityAcceptance"] as? Int
         creditCardState = dict["creditCardState"] as? String ?? creditCardState
     }
+    
+   
+}
+
+extension LoginUserRes {
+    func getFullName() -> String {
+        return self.firstName + " " + self.lastName
+    }
 }

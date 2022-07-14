@@ -19,7 +19,7 @@ class EmailVC: UIViewController {
         super.viewDidLoad()
         
         // Testing purpose
-        //self.txtEmail.text = "mayank@getbasis.co" //App User
+        self.txtEmail.text = "mayank@getbasis.co" //App User
     }
         
     // MARK: - Button actions

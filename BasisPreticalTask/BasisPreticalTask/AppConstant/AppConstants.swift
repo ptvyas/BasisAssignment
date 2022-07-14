@@ -26,4 +26,6 @@ struct APP_MESSAGE {
     
     static let Resend_OPT_Success       = "OPT successfully."
     static let enterValidOTP            = "Please enter valid OTP"
+    
+    static let enterReferName           = "Please enter Refer name"
 }
